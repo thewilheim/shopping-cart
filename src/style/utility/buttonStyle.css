@@ -1,0 +1,23 @@
+.btnStyle {
+  font-size: 1.7rem;
+  width: 16rem;
+  height: 5rem;
+  border: none;
+  color: var(--offWhite);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  border: 2px solid var(--offWhite);
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.btnStyle:active {
+  background-color: var(--offWhite);
+  color: var(--offBlack);
+  transform: scale(0.9);
+}
+
+.btnStyle:hover {
+  background-color: var(--offWhite);
+  color: var(--offBlack);
+}
