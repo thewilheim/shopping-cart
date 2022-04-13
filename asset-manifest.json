@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/thewilheim/shopping-cart.git/static/css/main.a4916b50.css",
-    "main.js": "/thewilheim/shopping-cart.git/static/js/main.0f1069f6.js",
-    "index.html": "/thewilheim/shopping-cart.git/index.html",
-    "main.a4916b50.css.map": "/thewilheim/shopping-cart.git/static/css/main.a4916b50.css.map",
-    "main.0f1069f6.js.map": "/thewilheim/shopping-cart.git/static/js/main.0f1069f6.js.map"
+    "main.css": "/shopping-cart/static/css/main.a4916b50.css",
+    "main.js": "/shopping-cart/static/js/main.0f1069f6.js",
+    "index.html": "/shopping-cart/index.html",
+    "main.a4916b50.css.map": "/shopping-cart/static/css/main.a4916b50.css.map",
+    "main.0f1069f6.js.map": "/shopping-cart/static/js/main.0f1069f6.js.map"
   },
   "entrypoints": [
     "static/css/main.a4916b50.css",
