@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../style/headerStyle.css";
 
 function Header(props) {
   const { cart, checkoutModal } = props;
@@ -14,9 +13,9 @@ function Header(props) {
         <Link to="/store">
           <button>Store</button>
         </Link>
-        <button onClick={() => checkoutModal()}>
-          Cart {cart.length > 0 ? cart.length : ``}
-        </button>
+        <Link to="/cart">
+          <button>Cart {cart.length > 0 ? cart.length : ``}</button>
+        </Link>
       </nav>
     </header>
   );

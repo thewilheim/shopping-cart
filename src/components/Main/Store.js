@@ -1,6 +1,5 @@
 import React from "react";
 import ProductCard from "../Utility/ProductCard";
-import "../../style/storeStyle.css";
 import "../../style/utility/buttonStyle.css";
 
 function Store(props) {

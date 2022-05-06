@@ -1,10 +1,9 @@
 import { React } from "react";
-import CheckoutCard from "./CheckoutCard";
+import CheckoutCard from "../Utility/CheckoutCard";
 import uniqid from "uniqid";
-import "../../style/modalStyle.css";
 
-function CheckoutModal(props) {
-  const { checkoutModal, cart, clearCart, updateQtn } = props;
+function Checkout(props) {
+  const { cart, clearCart, updateQtn } = props;
 
   const calculateTotal = (price, quantity) => {
     return cart.reduce(
@@ -15,20 +14,22 @@ function CheckoutModal(props) {
   };
 
   return (
-    <div className="modal">
-      <div className="modal-content">
-        {cart.map((item) => {
-          return (
-            <CheckoutCard
-              key={uniqid()}
-              name={item.name}
-              price={item.price}
-              quantity={item.quantity}
-              id={item.id}
-              updateQtn={updateQtn}
-            />
-          );
-        })}
+    <div className="cartContainer">
+      <div className="cartContent">
+        <div className="itemContainer">
+          {cart.map((item) => {
+            return (
+              <CheckoutCard
+                key={uniqid()}
+                name={item.name}
+                price={item.price}
+                quantity={item.quantity}
+                id={item.id}
+                updateQtn={updateQtn}
+              />
+            );
+          })}
+        </div>
         {cart.length <= 0 ? (
           <h4>On no your cart is empty!!</h4>
         ) : (
@@ -45,4 +46,4 @@ function CheckoutModal(props) {
   );
 }
 
-export default CheckoutModal;
+export default Checkout;

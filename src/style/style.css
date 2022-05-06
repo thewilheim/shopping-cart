@@ -3,3 +3,254 @@
   height: 100vh;
   font-size: 2rem;
 }
+
+body {
+}
+
+
+/* Header */
+header {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  width: 100%;
+  color: var(--offWhite);
+  background-color: var(--darkGreen);
+  box-shadow: 6px 6px 10px #4d5366;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+nav>a>button {
+  color: var(--offWhite);
+  cursor: pointer;
+  font-size: 2.4rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: transform 0.2s;
+}
+
+nav>a>button:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+nav>button:active,
+nav>a>button:active {
+  transform: scale(0.82);
+  transition: transform 0.2s;
+}
+
+
+
+/* Home Page */
+
+.homepageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homepageContent {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.homeInfo {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--offWhite);
+}
+
+.homeInfo>h1 {
+  font-size: 2.5rem;
+}
+
+.homeInfo>p {
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.homeInfo>a>button {
+  margin-top: 10rem;
+}
+
+
+@media screen and (min-width: 768px) {
+.homepageContent {
+  width: 80%;
+}
+
+.homeInfo>h1 {
+  margin-top: 20rem;
+  font-size: 10rem;
+  
+}
+
+.homeInfo>p {
+  margin: auto;
+  margin-top: 10rem;
+  width: 70%;
+}
+}
+
+
+/* Store */
+
+.storePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0rem 2rem 0rem 2rem;
+  color: var(--offWhite);
+}
+
+.storeInfo {
+  width: 65%;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.storeInfo>h1 {
+  font-size: 3rem;
+}
+
+.storeInfo>p {
+  margin: auto;
+  margin-top: 5rem;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.storeInfo>button {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .storeInfo {
+    width: 100%;
+  }
+  .storePage {
+    padding: 0rem 10rem 0rem 10rem;
+  }
+  .storeInfo>h1 {
+    font-size: 10rem;
+  }
+.storeInfo>p {
+  margin: auto;
+  margin-top: 5rem;
+  width: 120rem;
+  font-size: 3rem;
+  
+}
+
+.storeInfo>button {
+  margin-top: 10rem;
+  margin-left: 2rem;
+}
+}
+
+/* Product Styling */
+.productContainer {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(9, 600px);
+  row-gap: 1rem;
+  column-gap: 1rem;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.productCard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 2px solid var(--offWhite);
+  font-size: 2.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 5px 5px 6px #3f4353;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+.productContainer {
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(3, 600px);
+}
+}
+
+
+/* Cart Page */
+
+.cartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--offWhite);
+  height: 100vh;
+  width: 100%;
+
+}
+
+
+.cartContent {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+    text-align: center;
+}
+
+.itemContainer {
+  width: 100%;
+  overflow: scroll;
+  max-height: 60vh;
+}
+
+.checkoutCard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 15rem;
+  width: 100%;
+  font-size: 1.4rem;
+  margin-bottom: .5rem;
+}
+
+input[type=number] {
+  text-align: center;
+  width: 3rem;
+  padding: .2rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

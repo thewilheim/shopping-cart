@@ -4,16 +4,13 @@ import Homepage from "./components/Main/Homepage";
 import Store from "./components/Main/Store";
 import ProductsDB from "./components/Utility/ProductsDB";
 import Header from "./components/Navigation/Header";
-import CheckoutModal from "./components/Utility/CheckoutModal";
 import "./style/style.css";
-import ProductCard from "./components/Utility/ProductCard";
+import Checkout from "./components/Main/Checkout";
 
 function App() {
   // Cart State
   const [product, setProduct] = useState(ProductsDB);
   const [cart, setCart] = useState([]);
-
-  const [showModal, setShowModal] = useState(false);
 
   // Add to cart function
   const addToCart = (id) => {
@@ -62,22 +59,10 @@ function App() {
     setCart(filtered);
   };
 
-  const checkoutModal = () => {
-    showModal ? setShowModal(false) : setShowModal(true);
-  };
-
   return (
     <Router>
       <div className="mainContainer">
-        <Header cart={cart} checkoutModal={checkoutModal} />
-        {showModal ? (
-          <CheckoutModal
-            cart={cart}
-            checkoutModal={checkoutModal}
-            clearCart={clearCart}
-            updateQtn={updateQtn}
-          />
-        ) : null}
+        <Header cart={cart} />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route
@@ -87,6 +72,16 @@ function App() {
                 products={product}
                 addToCart={addToCart}
                 filterCart={filterCart}
+              />
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <Checkout
+                cart={cart}
+                clearCart={clearCart}
+                updateQtn={updateQtn}
               />
             }
           />
