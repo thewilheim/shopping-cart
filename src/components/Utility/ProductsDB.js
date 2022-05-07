@@ -20,7 +20,7 @@ const ProductsDB = [
     quantity: 1,
   },
   {
-    name: "Stawberry",
+    name: "Strawberry",
     price: 200,
     type: "Fruit",
     colour: "Red",
