@@ -3,7 +3,7 @@ import CheckoutCard from "../Utility/CheckoutCard";
 import uniqid from "uniqid";
 
 function Checkout(props) {
-  const { cart, clearCart, updateQtn } = props;
+  const { cart, clearCart, updateQtn, removeItem } = props;
 
   const calculateTotal = (price, quantity) => {
     return cart.reduce(
@@ -26,6 +26,7 @@ function Checkout(props) {
                 quantity={item.quantity}
                 id={item.id}
                 updateQtn={updateQtn}
+                removeItem={removeItem}
               />
             );
           })}

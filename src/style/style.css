@@ -225,23 +225,36 @@ nav>a>button:active {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-    text-align: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
 .itemContainer {
-  width: 100%;
-  overflow: scroll;
   max-height: 60vh;
+  margin: auto;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .checkoutCard {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 15rem;
-  width: 100%;
+  height: 20rem;
+  width: 20rem;
   font-size: 1.4rem;
   margin-bottom: .5rem;
+  background-color: rgba(240, 248, 255, 0.185);
+}
+
+.cardItems {
+  display: flex;
+  align-items: center;
+}
+
+.checkoutCard > button {
+  width: 10rem;
 }
 
 input[type=number] {
@@ -253,4 +266,52 @@ input[type=number] {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f11a;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (min-width: 768px) {
+  .cartContent {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .itemContainer {
+      max-height: 60vh;
+      margin: auto;
+      max-width: 50%;
+    }
+  
+    .checkoutCard {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: left;
+      height: 15rem;
+      width: 100rem;
+    }
 }

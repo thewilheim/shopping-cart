@@ -59,6 +59,16 @@ function App() {
     setCart(filtered);
   };
 
+  const removeItem = (id) => {
+    const filteredCart = cart.filter((item) => {
+      if (item.id !== id) {
+        return item;
+      }
+    });
+
+    setCart(filteredCart);
+  };
+
   return (
     <Router>
       <div className="mainContainer">
@@ -82,6 +92,7 @@ function App() {
                 cart={cart}
                 clearCart={clearCart}
                 updateQtn={updateQtn}
+                removeItem={removeItem}
               />
             }
           />
