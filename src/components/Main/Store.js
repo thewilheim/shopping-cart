@@ -20,19 +20,19 @@ function Store(props) {
           className="btnStyle"
           onClick={(e) => filterCart(e.target.innerHTML)}
         >
-          Apple
+          Fruit
         </button>
         <button
           className="btnStyle"
           onClick={(e) => filterCart(e.target.innerHTML)}
         >
-          Samsung
+          Cereal
         </button>
         <button
           className="btnStyle"
           onClick={(e) => filterCart(e.target.innerHTML)}
         >
-          Google
+          Dairy
         </button>
         <button
           className="btnStyle"
